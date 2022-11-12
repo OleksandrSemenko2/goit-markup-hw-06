@@ -278,6 +278,10 @@ header {
 .modal-inputs-container {
 }
 .modal-form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
 }
 .modal-legend {
   padding-top: 40px;
@@ -344,28 +348,28 @@ header {
 .modal-textarea::placeholder {
   color: var(--brand-placeholder-gray);
 }
-.agreement-box {
-  padding: 0 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--brand-color-gray);
+.modal-check {
+  padding-left: 1.2em;
 }
-.agreement {
-  margin-right: 7px;
+.modal-check-input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-.agreement-text {
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
+.modal-check-box {
+  position: absolute;
+  margin-left: -1.2em;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/off.svg);
 }
-.agreement-link {
+.modal-check-input:checked + .modal-check-box {
+  background-image: url(../images/on.svg);
+}
+.modal-check-text {
   color: var(--brand-color-blue);
   text-decoration: underline;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.03em;
 }
 .modal-send {
   font-weight: 700;
@@ -378,7 +382,6 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   margin-top: 30px;
-  margin-left: 164px;
 }
 .benefits {
   display: flex;
